@@ -8,9 +8,9 @@
       <p>
         <strong>Partenza da</strong>: {{ $train->stazione_partenza }} alle {{$train->orario_partenza}}<br>
         <strong>Arrivo a</strong>: {{ $train->stazione_arrivo }} alle {{$train->orario_arrivo}}<br>
-        <strong>Codice treno:</strong>: {{ $train->codice_treno }}<br>
-        <strong>Azienda:</strong>: {{ $train->azienda }}<br>
-        <strong>Il treno è: </strong>: {{ $train->in_orario }}<br>
+        <strong>Codice treno</strong>: {{ $train->codice_treno }}<br>
+        <strong>Azienda</strong>: {{ $train->azienda }}<br>
+        <strong>Il treno è</strong>: <span class="{{ $train->in_orario == 'in_orario' ? '' : 'text-danger fw-bold'}}">{{ $train->in_orario == 'in_orario' ? 'in orario' : 'in ritardo'}}</span><br>
 
       </p>
       <hr>
